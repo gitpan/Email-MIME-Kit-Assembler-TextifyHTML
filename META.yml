@@ -1,0 +1,11 @@
+--- 
+abstract: textify some HTML arguments to assembly
+author: 
+  - Ricardo Signes <rjbs@cpan.org>
+generated_by: Dist::Zilla::Plugin::MetaYaml version 1.004
+license: perl
+name: Email-MIME-Kit-Assembler-TextifyHTML
+requires: 
+  Email::MIME::Kit: 2.003
+  HTML::FormatText::WithLinks: 0
+version: 1.000
