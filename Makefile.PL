@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'Email::MIME::Kit::Assembler::TextifyHTML',
   AUTHOR    => 'Ricardo\ Signes\ \<rjbs\@cpan\.org\>',
   ABSTRACT  => 'textify some HTML arguments to assembly',
-  VERSION   => '1.000',
+  VERSION   => '1.001',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.21) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

@@ -8,4 +8,4 @@ name: Email-MIME-Kit-Assembler-TextifyHTML
 requires: 
   Email::MIME::Kit: 2.003
   HTML::FormatText::WithLinks: 0
-version: 1.000
+version: 1.001

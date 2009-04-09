@@ -1,5 +1,5 @@
 package Email::MIME::Kit::Assembler::TextifyHTML;
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 use Moose;
 extends 'Email::MIME::Kit::Assembler::Standard';
@@ -45,7 +45,6 @@ around assemble => sub {
   my $local_arg = { %$arg };
 
   for my $key (@{ $self->html_args }) {
-    warn "checking on $key\n";
     next unless defined $local_arg->{ $key };
     $local_arg->{ $key } = $self->formatter->parse($local_arg->{ $key });
   }
@@ -66,7 +65,7 @@ Email::MIME::Kit::Assembler::TextifyHTML - textify some HTML arguments to assemb
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 
