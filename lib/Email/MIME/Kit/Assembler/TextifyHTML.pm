@@ -1,6 +1,7 @@
 package Email::MIME::Kit::Assembler::TextifyHTML;
-our $VERSION = '1.001';
-
+{
+  $Email::MIME::Kit::Assembler::TextifyHTML::VERSION = '1.002';
+}
 use Moose;
 extends 'Email::MIME::Kit::Assembler::Standard';
 # ABSTRACT: textify some HTML arguments to assembly
@@ -65,26 +66,26 @@ Email::MIME::Kit::Assembler::TextifyHTML - textify some HTML arguments to assemb
 
 =head1 VERSION
 
-version 1.001
+version 1.002
 
 =head1 SYNOPSIS
 
 In your F<manifest.yaml>:
 
-    alteratives:
-    - type: text/plain
-      path: body.txt
-      assembler:
-      - TextifyHTML
-      - html_args: [ body ]
-    - type: text/html
-      path: body.html
+  alteratives:
+  - type: text/plain
+    path: body.txt
+    assembler:
+    - TextifyHTML
+    - html_args: [ body ]
+  - type: text/html
+    path: body.html
 
 Then:
 
-    my $email = $kit->assemble({
-      body => '<div><p> ... </p></div>',
-    });
+  my $email = $kit->assemble({
+    body => '<div><p> ... </p></div>',
+  });
 
 The C<body> argument will be rendered intact in the the HTML part, but will
 converted to plaintext before the plaintext part is rendered.
@@ -101,15 +102,13 @@ HTML to text.  This would allow you to use one template for both HTML and text.
 
 =head1 AUTHOR
 
-  Ricardo Signes <rjbs@cpan.org>
+Ricardo Signes <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Ricardo Signes.
+This software is copyright (c) 2013 by Ricardo Signes.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
-
+=cut
